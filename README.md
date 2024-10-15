@@ -26,8 +26,8 @@ I'm constantly updating my portfolio with new projects and experiences, so be su
 
 ## Screenshots
 
-![Homepage Screenshot](images/screenshot1.png) <!-- Adjust the path if your image is located elsewhere -->
-![Projects Section Screenshot](images/screenshot2.png) <!-- Adjust the path if your image is located elsewhere -->
+![Homepage Screenshot](screenshot44.png) <!-- Adjust the path if your image is located elsewhere -->
+![Projects Section Screenshot](screenshot55.png) <!-- Adjust the path if your image is located elsewhere -->
 
 ## Technologies Used
 
