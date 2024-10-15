@@ -1,53 +1,43 @@
-# Car Price Prediction
+# 🌟 Personal Portfolio
 
-## Project Overview
+🚀 Excited to share my latest project - my personal portfolio website! 🌐
 
-Designed and implemented a web application for predicting car prices using a linear regression model. This project enables potential car buyers and sellers to make informed decisions based on accurate price forecasts.
+## Link to Website
 
-## Code Link
+[Visit My Portfolio](https://aryanjaswal0507.github.io/PERSONAL-PORTFOLIO/)
 
-[GitHub Repository](https://github.com/aryanjaswal0507/CAR-PRICE-PREDICTION/tree/main)
+## About Me
 
-## Key Technologies
+As a Computer Science student specializing in Artificial Intelligence and Machine Learning, I created this platform to showcase my skills, projects, and journey in the tech world. My portfolio website serves as a hub where visitors can learn more about me, my educational background, skills, and projects.
 
-- **Programming Language**: Python
-- **Web Framework**: Flask
-- **Data Manipulation Libraries**: Pandas, NumPy
-- **Machine Learning Library**: Scikit-learn (Linear Regression)
-- **Data Serialization**: Pickle
-- **Frontend Development**: HTML, CSS (Bootstrap)
+## Features
 
-## Data Processing and Model Development
+🔍 **About Me**: Dive into my background, education, and interests in the tech field.
 
-- Explored key features such as `year`, `company`, `fuel_type`, and `Price` to understand their distributions.
-- Cleaned the data by removing missing values and filtering non-numeric entries, enhancing dataset integrity.
-- Employed one-hot encoding for categorical variables to prepare them for the machine learning model.
-- Split the data into training and testing sets, ensuring diversity for better model generalization.
-- Developed and fine-tuned a linear regression model, achieving a high R² score for predictive accuracy.
-- Serialized the model using Pickle for seamless integration into the Flask web application.
+📚 **Education**: Explore my academic journey, including my current pursuit of a Bachelor of Technology in CSE with a focus on AI & ML.
 
-## Outcome
+👨‍💻 **Skills**: Discover the programming languages, technologies, and concepts I'm proficient in, including Python, C++, HTML, CSS, and more.
 
-The application delivers precise car price predictions based on user inputs, showcasing the effective integration of machine learning with web technologies. This project highlights the importance of data preprocessing and model optimization in creating reliable predictive solutions.
+💼 **Projects**: Check out some of my notable projects, such as Voice Controlled Assistant, Hand Gesture Recognition, and Recipe Website. Each project highlights my problem-solving abilities and passion for technology.
+
+📞 **Contact**: Reach out to me directly via email or phone for collaboration opportunities, project inquiries, or just to connect!
+
+I'm constantly updating my portfolio with new projects and experiences, so be sure to visit regularly to see what's new. Let's connect and explore how we can innovate and create together! 🚀
 
 ## Screenshots
 
-![Application Screenshot](sample3.png) <!-- Adjust the path if your image is located elsewhere -->
+![Homepage Screenshot](images/screenshot1.png) <!-- Adjust the path if your image is located elsewhere -->
+![Projects Section Screenshot](images/screenshot2.png) <!-- Adjust the path if your image is located elsewhere -->
 
-## Keywords
+## Technologies Used
 
-Machine Learning, Flask, Python, Linear Regression, Data Preprocessing, Pandas, NumPy, Scikit-learn, RESTful API, Data Visualization, Predictive Modeling, Data Science.
+- HTML
+- CSS
+- JavaScript (if applicable)
+- Responsive Web Design
 
-## Skills
-
-- Machine Learning
-- Data Preprocessing
-- Data Visualization
-- Python Programming
-- Data Science
-
-## How to Run the Project
+## How to Run the Project Locally
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/aryanjaswal0507/CAR-PRICE-PREDICTION.git
+   git clone https://github.com/aryanjaswal0507/PERSONAL-PORTFOLIO.git
