@@ -30,6 +30,10 @@ Designed and implemented a web application for predicting car prices using a lin
 
 The application delivers precise car price predictions based on user inputs, showcasing the effective integration of machine learning with web technologies. This project highlights the importance of data preprocessing and model optimization in creating reliable predictive solutions.
 
+## Screenshots
+
+![Application Screenshot](images/screenshot.png) <!-- Adjust the path if your image is located elsewhere -->
+
 ## Keywords
 
 Machine Learning, Flask, Python, Linear Regression, Data Preprocessing, Pandas, NumPy, Scikit-learn, RESTful API, Data Visualization, Predictive Modeling, Data Science.
