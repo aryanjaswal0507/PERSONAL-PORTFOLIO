@@ -32,7 +32,7 @@ The application delivers precise car price predictions based on user inputs, sho
 
 ## Screenshots
 
-![Application Screenshot](images/screenshot.png) <!-- Adjust the path if your image is located elsewhere -->
+![Application Screenshot](sample3.png) <!-- Adjust the path if your image is located elsewhere -->
 
 ## Keywords
 
