@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="images/profile-pic.jpg" alt="Aryan Jaswal" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Aryan Jaswal">Aryan Jaswal</h1>
+
+          <p class="title">AI & ML</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:aryanjaswal0507@gmail.com" class="contact-link">aryanjaswal0507@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+917876141265" class="contact-link">+(91)7876141265</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">July 05, 2004</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Ghaluwal, una, H.P (177209)</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://github.com/aryanjaswal0507" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/aryanjaswal0507?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/_aryan_jaswal_?igsh=MTd2Z21yaGh4OWNqYw%3D%3D&utm_source=qr" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Project</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I am a third-year B.Tech student specializing in Artificial Intelligence and Machine Learning within Computer Science Engineering. With a deep fascination for AI’s transformative power, I’ve built a strong foundation in AI and ML through coursework and hands-on projects, including deepfake detection and biometric recognition systems.
+          </p>
+
+          <p>
+            Passionate about solving real-world problems with AI, I’ve worked extensively with TensorFlow and PyTorch. My curiosity drives me to continuously learn and explore advancements in AI, seeking to improve accuracy and reliability in my projects. I look forward to contributing to impactful AI innovations and collaborating with like-minded individuals.
+          </p>
+        </section>
+
+
+        <!--
+          - What i'm doin
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="images/ml-logo.png
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">ML projects</h4>
+
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="images/we-dev-logo.png" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            
+
+            
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - activities
+        -->
+
+        <section class="activities">
+
+          <h3 class="h3 activities-title" style="color: white;">Activities</h3>
+        
+          <ul class="activities-list has-scrollbar">
+        
+            <li class="activities-item">
+              <div class="content-card" data-activities-item>
+        
+                <figure class="activities-avatar-box">
+                  <a href="https://drive.google.com/file/d/1tRsuQuynTZF1tWmMdHFb6TC9EzxqTGVV/view?usp=share_link" target="_blank">
+                    <img src="images/CERTIFICATE/NITJ internship.PNG" alt="name1" width="100" data-activities-avatar>
+                  </a>
+                </figure>
+        
+                <h4 class="h4 activities-item-title" data-activities-title><a href="https://drive.google.com/file/d/1tRsuQuynTZF1tWmMdHFb6TC9EzxqTGVV/view?usp=share_link" target="_blank" style="color: white;">NIT JALANDHAR INTERNSHIP</a></h4>
+        
+                <div class="activities-text" data-activities-text>
+                  <p>
+                    <a href="https://drive.google.com/file/d/1tRsuQuynTZF1tWmMdHFb6TC9EzxqTGVV/view?usp=share_link" target="_blank" style="color: white;">Made deepfake detection and heart disease detection model</a>
+                  </p>
+                </div>
+        
+              </div>
+            </li>
+        
+            <li class="activities-item">
+              <div class="content-card" data-activities-item>
+        
+                <figure class="activities-avatar-box">
+                  <a href="https://example.com/link2" target="_blank">
+                    <img src="./assets/images/avatar-2.png" alt="name2" width="100" data-activities-avatar>
+                  </a>
+                </figure>
+        
+                <h4 class="h4 activities-item-title" data-activities-title><a href="https://example.com/link2" target="_blank" style="color: white;">name2</a></h4>
+        
+                <div class="activities-text" data-activities-text>
+                  <p>
+                    <a href="https://example.com/link2" target="_blank" style="color: white;">22222222222222222222222</a>
+                  </p>
+                </div>
+        
+              </div>
+            </li>
+        
+            <li class="activities-item">
+              <div class="content-card" data-activities-item>
+        
+                <figure class="activities-avatar-box">
+                  <a href="https://example.com/link3" target="_blank">
+                    <img src="./assets/images/avatar-3.png" alt="name3" width="100" data-activities-avatar>
+                  </a>
+                </figure>
+        
+                <h4 class="h4 activities-item-title" data-activities-title><a href="https://example.com/link3" target="_blank" style="color: white;">name3</a></h4>
+        
+                <div class="activities-text" data-activities-text>
+                  <p>
+                    <a href="https://example.com/link3" target="_blank" style="color: white;">333333333333333333333</a>
+                  </p>
+                </div>
+        
+              </div>
+            </li>
+        
+            <li class="activities-item">
+              <div class="content-card" data-activities-item>
+        
+                <figure class="activities-avatar-box">
+                  <a href="https://example.com/link4" target="_blank">
+                    <img src="./assets/images/avatar-4.png" alt="name4" width="100" data-activities-avatar>
+                  </a>
+                </figure>
+        
+                <h4 class="h4 activities-item-title" data-activities-title><a href="https://example.com/link4" target="_blank" style="color: white;">name4</a></h4>
+        
+                <div class="activities-text" data-activities-text>
+                  <p>
+                    <a href="https://example.com/link4" target="_blank" style="color: white;">4444444444444444444444</a>
+                  </p>
+                </div>
+        
+              </div>
+            </li>
+        
+          </ul>
+        
+        </section>
+
+
+        <!--
+          - activities IMPPORTANTTTTTTTTTTTTTTTTT
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="activities-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+        <!--
+          - activities IMPPORTANTTTTTTTTTTTTTTTTT
+        -->
+
+
+
+        
+        <!--
+          - certificate
+        -->
+        <section class="certificate">
+          <h3 class="h3 certificate-title">Certificate</h3>
+          <ul class="certificate-list has-scrollbar">
+            <li class="certificate-item">
+              <a href="https://drive.google.com/file/d/1RQfzbpLw3asnw664dvjaVbY5G15Y1YhW/view?usp=share_link" target="_blank">
+                <img src="images/CERTIFICATE/nptel-certificate.jpg" alt="NPTEL Certificate">
+              </a>
+              <p style="color: white; text-align: center; font-weight: bold; margin-top: 10px;">NPTEL Certificate</p>
+            </li>
+            <li class="certificate-item">
+              <a href="https://drive.google.com/file/d/1sNPn7_so9ug2Du23FKCbEVUl5KfHus7i/view?usp=share_link" target="_blank">
+                <img src="images/CERTIFICATE/IIT Mandi Workshop.JPG" alt="IIT Mandi Workshop Certificate">
+              </a>
+              <p style="color: white; text-align: center; font-weight: bold; margin-top: 10px;">IIT Mandi (AI/ML) Workshop </p>
+            </li>
+            <li class="certificate-item">
+              <a href="https://drive.google.com/file/d/1rX2jmgOKwnt6CrdQlpuWfQF756mx7Ara/view?usp=share_link" target="_blank">
+                <img src="/port.new/images/CERTIFICATE/nptel-python.JPG" alt="Certificat">
+              </a>
+              <p style="color: white; text-align: center; font-weight: bold; margin-top: 10px;">NPTEL Certificate</p>
+            </li>
+            <li class="certificate-item">
+              <a href="https://drive.google.com/file/d/1rWrPtMhBiB_58xD4B1lGBDDYSgwKPMXv/view?usp=share_link" target="_blank">
+                <img src="/port.new/images/CERTIFICATE/Spoken-tutorial.JPG" alt="Certificate 4">
+              </a>
+              <p style="color: white; text-align: center; font-weight: bold; margin-top: 10px;">Spoken Tutorial</p>
+            </li>
+          </ul>
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Rockford Day boarding public school (Una)</h4>
+
+              <span>2020</span>
+
+              <p class="timeline-text">
+                completed my 10th with 84.4% ..
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Rockford Day boarding public school (Una)</h4>
+
+              <span>2022</span>
+
+              <p class="timeline-text">
+                completed my 12th with 74.5% .. 
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Jawaharlal Nehru Government Engineering College</h4>
+
+              <span>2022 — 2026</span>
+
+              <p class="timeline-text">
+                Currently doing B-tech in CSE(AI&ML) ..
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Machine Learning algorithm.</h4>
+
+              <span>2022 — Present</span>
+
+              <p class="timeline-text">
+                I have experience developing and deploying machine learning models using Python,
+                focusing on classification, regression, and clustering techniques. I am proficient with
+                libraries such as scikit-learn, TensorFlow, and PyTorch for building and evaluating predictive models.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">web development</h4>
+
+              <span>2022 — present</span>
+
+              <p class="timeline-text">
+                I have experience in developing responsive and visually appealing websites using HTML, CSS, and JavaScript. 
+                My work includes creating user-friendly interfaces, implementing interactive features, and ensuring cross-browser compatibility.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web devlopnment</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">ML algirithm</h5>
+                <data value="60">60%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Data structure and akgorithm</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Python</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #IMPORT
+      -->
+            <button class="filter-select" data-select>
+            </button> 
+       <!--
+        - #IMPORT
+      -->
+
+
+
+
+<!--
+    - #PROJECTS
+-->
+
+<article class="project" data-page="project">
+
+  <header>
+    <h2 class="h2 article-title">Project</h2>
+  </header>
+
+  <section class="project-posts">
+
+    <ul class="project-posts-list">
+
+      <li class="project-post-item">
+        <a href="https://github.com/aryanjaswal0507/CAR-PRICE-PREDICTION">
+
+          <figure class="project-banner-box">
+            <img src="images/car-price.png" alt="CAR-PRICE-PREDICTION" loading="lazy">
+          </figure>
+
+          <div class="project-content">
+
+            <div class="project-meta">
+              <p class="project-category">Design</p>
+
+              <span class="dot"></span>
+
+              <time datetime="2022-02-23">Feb 23, 2022</time>
+            </div>
+
+            <h3 class="h3 project-item-title">CAR-PRICE-PREDICTION</h3>
+
+            <p class="project-text">
+              I developed a car price prediction website utilizing machine learning algorithms and Flask.
+              The platform accurately estimates vehicle prices based on user-input features, providing a seamless and
+              intuitive user experience.
+            </p>
+
+          </div>
+
+        </a>
+      </li>
+
+      <li class="project-post-item">
+        <a href="https://aryanjaswal0507.github.io/PET-WEBSITE/">
+
+          <figure class="project-banner-box">
+            <img src="images/pet-website.png" alt="PET-WEBSITE" loading="lazy">
+          </figure>
+
+          <div class="project-content">
+
+            <div class="project-meta">
+              <p class="project-category">Design</p>
+
+              <span class="dot"></span>
+
+              <time datetime="2022-02-23">Feb 23, 2022</time>
+            </div>
+
+            <h3 class="h3 project-item-title">PET-WEBSITE</h3>
+
+            <p class="project-text">
+              Welcome to my pet website, where you’ll find detailed information about various pets, their care, and the best tips
+              for keeping them happy and healthy. This site is a project I created for practicing HTML and showcasing my web 
+              development skills.
+            </p>
+
+          </div>
+
+        </a>
+      </li>
+
+      <li class="project-post-item">
+        <a href="https://github.com/aryanjaswal0507/MOVIE-RECOMMENDATION/tree/main">
+
+          <figure class="project-banner-box">
+            <img src="images/MOVIE RECC.png" alt="MOVIE-RECCOMNDATION" loading="lazy">
+          </figure>
+
+          <div class="project-content">
+
+            <div class="project-meta">
+              <p class="project-category">Design</p>
+
+              <span class="dot"></span>
+
+              <time datetime="2022-02-23">Feb 23, 2022</time>
+            </div>
+
+            <h3 class="h3 project-item-title">MOVIE-RECCOMNDATION</h3>
+
+            <p class="project-text">
+              I developed a movie recommendation system using Python, Streamlit, and machine learning to provide personalized suggestions based on user-selected titles. By analyzing a dataset of 10,000 movies from TMDB, I combined genres and movie overviews into a ‘tags’ feature to better capture relationships between films. Using CountVectorizer for text vectorization and cosine similarity for similarity measurement, the system effectively recommends movies. The user interface, built with Streamlit, allows for easy interaction, while pickle was used to optimize model loading and ensure fast performance. This project demonstrates the use of NLP and machine learning to enhance user engagement.
+            </p>
+
+          </div>
+
+        </a>
+      </li>
+
+
+      <li class="project-post-item">
+        <a href="https://github.com/aryanjaswal0507/HAND-GESTURE">
+
+          <figure class="project-banner-box">
+            <img src="images/hand gesture.png" alt="Hand Gesture Presentation Controller" loading="lazy">
+          </figure>
+
+          <div class="project-content">
+
+            <div class="project-meta">
+              <p class="project-category">Design</p>
+
+              <span class="dot"></span>
+
+              <time datetime="2022-02-23">Feb 23, 2022</time>
+            </div>
+
+            <h3 class="h3 project-item-title">Hand Gesture Presentation Controller</h3>
+
+            <p class="project-text">
+              The Hand Gesture Presentation Controller is a project that enables users to control slides using hand gestures, making presentations more interactive. It uses a webcam to detect hand movements for slide navigation and drawing in real-time. Key features include swipe gestures for slide control, finger gestures for drawing, an undo option for removing the last drawing, and a webcam feed overlay beside the presentation slides. Built using Python, OpenCV for image processing, and CVZone for gesture detection, the setup requires installing Python along with libraries like OpenCV, NumPy, and CVZone.
+            </p>
+
+          </div>
+
+        </a>
+      </li>
+
+
+      <li class="project-post-item">
+        <a href="https://github.com/aryanjaswal0507/YT-CHROME.EXTENSION">
+
+          <figure class="project-banner-box">
+            <img src="images/yt-ext.png" alt="YouTube Audio Control Extension" loading="lazy">
+          </figure>
+
+          <div class="project-content">
+
+            <div class="project-meta">
+              <p class="project-category">Design</p>
+
+              <span class="dot"></span>
+
+              <time datetime="2022-02-23">Feb 23, 2022</time>
+            </div>
+
+            <h3 class="h3 project-item-title">YouTube Audio Control Extension</h3>
+
+            <p class="project-text">
+              The YouTube Audio Control Extension is a Chrome extension that enhances the audio experience of YouTube videos by allowing users to adjust the volume and boost bass levels. It features a user-friendly popup interface with sliders for easy control over volume and bass, providing a richer sound experience. The extension is built using HTML, CSS, and JavaScript, utilizing the Chrome extension API to modify YouTube’s audio properties directly from the browser.
+            </p>
+
+          </div>
+
+        </a>
+      </li>
+
+      <li class="project-post-item">
+        <a href="https://github.com/aryanjaswal0507/GEO-LOCATION">
+
+          <figure class="project-banner-box">
+            <img src="images/geo-loc.png" alt="Geolocation Auto-Attendance System" loading="lazy">
+          </figure>
+
+          <div class="project-content">
+
+            <div class="project-meta">
+              <p class="project-category">Design</p>
+
+              <span class="dot"></span>
+
+              <time datetime="2022-02-23">Feb 23, 2022</time>
+            </div>
+
+            <h3 class="h3 project-item-title">Geolocation Auto-Attendance System</h3>
+
+            <p class="project-text">
+              This project is an Auto-Attendance System that uses geolocation technology to track user attendance by checking their location every 10 seconds. It determines if the user is within a predefined geofence and records the time spent in that area. If the user leaves, it counts the pauses. Built with HTML, CSS, and JavaScript, the system uses the Geolocation API for real-time location tracking and features a responsive design for both desktop and mobile devices.
+            </p>
+
+          </div>
+
+        </a>
+      </li>
+
+
+
+    </ul>
+
+  </section>
+
+</article>
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      
+      <article class="contact" data-page="contact">
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+      
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54447.064255334386!2d76.22772932098178!3d31.470794938755763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391ad053bccff95d%3A0x4be9fd7ce7d7390e!2sUna%2C%20Himachal%20Pradesh%20174303!5e0!3m2!1sen!2sin!4v1720967058333!5m2!1sen!2sin"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+      
+        <section class="contact-form">
+          <h3 class="h3 form-title">Contact Form</h3>
+      
+          <form action="#" class="form" data-form>
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="text" name="Phone no." class="form-input" placeholder="Phone no." required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+      
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+      
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button> 
+          </form>
+        </section>
+      </article>
+    
+     
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
