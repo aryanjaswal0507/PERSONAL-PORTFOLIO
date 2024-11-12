@@ -27,88 +27,13 @@
 
 <body>
 
-  <!-- Hello Screen -->
-  <div id="helloScreenWrapper">
-    <div id="helloScreen"></div>
-  </div>
-
-  <!-- Main Content -->
-  <main>
-
-    <!-- Sidebar -->
-    <aside class="sidebar" data-sidebar>
-      <div class="sidebar-info">
-        <figure class="avatar-box">
-          <img src="images/profile-pic.jpg" alt="Profile Picture">
-        </figure>
-        <!-- Additional Sidebar Content -->
-      </div>
-    </aside>
-
-    <!-- Portfolio Content -->
-    <section class="content">
-      <h1>Welcome to My Personal Portfolio</h1>
-      <!-- Add your portfolio sections here -->
-    </section>
-
-  </main>
-
-  <!-- JavaScript for Hello Screen -->
-  <script>
-    const greetings = [
-      "Hello", "Hola", "Bonjour", "Hallo", "Ciao",
-      "こんにちは", "안녕하세요", "你好", "नमस्ते", "Olá",
-      "Привет", "Merhaba", "ਸਤ ਸ੍ਰੀ ਅਕਾਲ", "வணக்கம்", "Salam"
-    ];
-
-    const helloScreen = document.getElementById('helloScreen');
-    const helloScreenWrapper = document.getElementById('helloScreenWrapper');
-    let index = 0;
-
-    function changeGreeting() {
-      helloScreen.textContent = greetings[index];
-      index = (index + 1) % greetings.length;
-    }
-
-    // Change greeting every 1 second
-    setInterval(changeGreeting, 1000);
-
-    // Initialize with the first greeting
-    changeGreeting();
-
-    // Hide the Hello Screen after 5 seconds
-    setTimeout(() => {
-      helloScreenWrapper.style.display = 'none';
-    }, 5000);
-  </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
   <!--
     - #MAIN
   -->
 
+  <main>
 
-
-  
-<!--
- #<main>
-
- 
-  
-  
-  <!--
+    <!--
       - #SIDEBAR
     -->
 
