@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,25 +8,124 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Portfolio</title>
 
-  <!--
-    - favicon
-  -->
+  <!-- Favicon -->
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
-  <!--
-    - custom css link
-  -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 
-  <!--
-    - google font link
-  -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Animation Style -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #helloScreen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #000;
+      color: #FFD700;
+      font-size: 8em;
+      z-index: 1000;
+      text-align: center;
+      animation: fadeInOut 2s ease-in-out infinite;
+    }
+
+    @keyframes fadeInOut {
+      0% { opacity: 0; transform: translateY(20px); }
+      50% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(-20px); }
+    }
+  </style>
 </head>
 
 <body>
+
+  <!-- Animated Hello Screen -->
+  <div id="helloScreen"></div>
+
+  <!-- Main Portfolio -->
+  <main style="display: none;" id="portfolioContent">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="images/profile-pic.jpg" alt="Aryan Jaswal" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Aryan Jaswal">Aryan Jaswal</h1>
+          <p class="title">AI & ML</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    const greetings = [
+      "Hello", "नमस्ते", "Hola", "ਸਤ ਸ੍ਰੀ ਅਕਾਲ", "Bonjour", "Hallo", "Ciao", "안녕하세요", "Olá",
+      "Привет", "வணக்கம்", "Salam"
+    ];
+
+    const helloScreen = document.getElementById('helloScreen');
+    const portfolioContent = document.getElementById('portfolioContent');
+    let index = 0;
+
+    function changeGreeting() {
+      helloScreen.textContent = greetings[index];
+      index = (index + 1) % greetings.length;
+    }
+
+    // Change greeting every 2 seconds
+    setInterval(changeGreeting, 2000);
+
+    // Hide hello screen and show portfolio after 6 seconds
+    setTimeout(() => {
+      helloScreen.style.display = 'none';
+      portfolioContent.style.display = 'block';
+    }, 6000);
+
+    // Initialize with the first greeting
+    changeGreeting();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <!--
     - #MAIN
