@@ -271,94 +271,109 @@
         -->
 
         <section class="activities">
-
           <h3 class="h3 activities-title" style="color: white;">Activities</h3>
         
           <ul class="activities-list has-scrollbar">
-        
             <li class="activities-item">
               <div class="content-card" data-activities-item>
-        
                 <figure class="activities-avatar-box">
                   <a href="https://drive.google.com/file/d/1tRsuQuynTZF1tWmMdHFb6TC9EzxqTGVV/view?usp=share_link" target="_blank">
-                    <img src="images/CERTIFICATE/NITJ internship.PNG" alt="name1" width="100" data-activities-avatar>
+                    <img 
+                      src="images/CERTIFICATE/NITJ internship.PNG" 
+                      alt="name1" 
+                      width="100" 
+                      data-activities-avatar 
+                      onclick="openFullscreen(this)"
+                      id="imageToZoom"
+                    >
                   </a>
                 </figure>
         
-                <h4 class="h4 activities-item-title" data-activities-title><a href="https://drive.google.com/file/d/1tRsuQuynTZF1tWmMdHFb6TC9EzxqTGVV/view?usp=share_link" target="_blank" style="color: white;">NIT JALANDHAR INTERNSHIP</a></h4>
+                <h4 class="h4 activities-item-title" data-activities-title>
+                  <span style="color: white;" class="text-clickable" onclick="openFullscreenFromText()">NIT JALANDHAR INTERNSHIP</span>
+                </h4>
         
                 <div class="activities-text" data-activities-text>
                   <p>
-                    <a href="https://drive.google.com/file/d/1tRsuQuynTZF1tWmMdHFb6TC9EzxqTGVV/view?usp=share_link" target="_blank" style="color: white;">Made deepfake detection and heart disease detection model</a>
+                    <span style="color: white;" class="text-clickable" onclick="openFullscreenFromText()">Made deepfake detection and heart disease detection model</span>
                   </p>
                 </div>
-        
               </div>
             </li>
-        
-            <li class="activities-item">
-              <div class="content-card" data-activities-item>
-        
-                <figure class="activities-avatar-box">
-                  <a href="https://example.com/link2" target="_blank">
-                    <img src="./assets/images/avatar-2.png" alt="name2" width="100" data-activities-avatar>
-                  </a>
-                </figure>
-        
-                <h4 class="h4 activities-item-title" data-activities-title><a href="https://example.com/link2" target="_blank" style="color: white;">name2</a></h4>
-        
-                <div class="activities-text" data-activities-text>
-                  <p>
-                    <a href="https://example.com/link2" target="_blank" style="color: white;">22222222222222222222222</a>
-                  </p>
-                </div>
-        
-              </div>
-            </li>
-        
-            <li class="activities-item">
-              <div class="content-card" data-activities-item>
-        
-                <figure class="activities-avatar-box">
-                  <a href="https://example.com/link3" target="_blank">
-                    <img src="./assets/images/avatar-3.png" alt="name3" width="100" data-activities-avatar>
-                  </a>
-                </figure>
-        
-                <h4 class="h4 activities-item-title" data-activities-title><a href="https://example.com/link3" target="_blank" style="color: white;">name3</a></h4>
-        
-                <div class="activities-text" data-activities-text>
-                  <p>
-                    <a href="https://example.com/link3" target="_blank" style="color: white;">333333333333333333333</a>
-                  </p>
-                </div>
-        
-              </div>
-            </li>
-        
-            <li class="activities-item">
-              <div class="content-card" data-activities-item>
-        
-                <figure class="activities-avatar-box">
-                  <a href="https://example.com/link4" target="_blank">
-                    <img src="./assets/images/avatar-4.png" alt="name4" width="100" data-activities-avatar>
-                  </a>
-                </figure>
-        
-                <h4 class="h4 activities-item-title" data-activities-title><a href="https://example.com/link4" target="_blank" style="color: white;">name4</a></h4>
-        
-                <div class="activities-text" data-activities-text>
-                  <p>
-                    <a href="https://example.com/link4" target="_blank" style="color: white;">4444444444444444444444</a>
-                  </p>
-                </div>
-        
-              </div>
-            </li>
-        
           </ul>
         
+          <!-- Fullscreen Modal -->
+          <div id="fullscreenModal" class="fullscreen-modal">
+            <span class="close-button" onclick="closeFullscreen()">&times;</span>
+            <img id="fullscreenImage" class="fullscreen-image">
+          </div>
         </section>
+        
+        <style>
+          /* Fullscreen Modal Styles */
+          .fullscreen-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+          }
+        
+          .fullscreen-image {
+            max-width: 90%;
+            max-height: 90%;
+          }
+        
+          .close-button {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+            z-index: 1001;
+            font-weight: bold;
+            border: none; /* No border */
+            background: none; /* Transparent background */
+            padding: 5px; /* Padding for easier click */
+          }
+        
+          .close-button:hover {
+            color: #bbb; /* Hover color */
+          }
+        
+          /* Make cursor pointer on clickable text */
+          .text-clickable {
+            cursor: pointer; /* Pointer cursor when hovering over text */
+          }
+        </style>
+        
+        <script>
+          // Open Fullscreen for Images
+          function openFullscreen(imageElement) {
+            const modal = document.getElementById("fullscreenModal");
+            const modalImg = document.getElementById("fullscreenImage");
+            modal.style.display = "flex";
+            modalImg.src = imageElement.src;
+          }
+        
+          // Open Fullscreen for Text (clicked text)
+          function openFullscreenFromText() {
+            const imageElement = document.getElementById("imageToZoom");
+            openFullscreen(imageElement); // Trigger the same function as for the image click
+          }
+        
+          // Close Fullscreen
+          function closeFullscreen() {
+            const modal = document.getElementById("fullscreenModal");
+            modal.style.display = "none";
+          }
+        </script>
 
 
         <!--
@@ -414,35 +429,188 @@
         <!--
           - certificate
         -->
+
+
+
+
         <section class="certificate">
           <h3 class="h3 certificate-title">Certificate</h3>
           <ul class="certificate-list has-scrollbar">
             <li class="certificate-item">
-              <a href="https://drive.google.com/file/d/1RQfzbpLw3asnw664dvjaVbY5G15Y1YhW/view?usp=share_link" target="_blank">
-                <img src="images/CERTIFICATE/nptel-certificate.jpg" alt="NPTEL Certificate">
-              </a>
-              <p style="color: white; text-align: center; font-weight: bold; margin-top: 10px;">NPTEL Certificate</p>
+              <div class="image-container">
+                <img src="images/CERTIFICATE/nptel-certificate.jpg" alt="NPTEL Certificate" class="zoomable-image">
+              </div>
+              <p style="color: white; text-align: center; font-weight: bold; margin-top: 10px;">ML for Engineering and Science Application (NPTEL) </p>
             </li>
             <li class="certificate-item">
-              <a href="https://drive.google.com/file/d/1sNPn7_so9ug2Du23FKCbEVUl5KfHus7i/view?usp=share_link" target="_blank">
-                <img src="images/CERTIFICATE/IIT Mandi Workshop.JPG" alt="IIT Mandi Workshop Certificate">
-              </a>
-              <p style="color: white; text-align: center; font-weight: bold; margin-top: 10px;">IIT Mandi (AI/ML) Workshop </p>
+              <div class="image-container">
+                <img src="images/CERTIFICATE/IIT Mandi Workshop.JPG" alt="IIT Mandi Workshop Certificate" class="zoomable-image">
+              </div>
+              <p style="color: white; text-align: center; font-weight: bold; margin-top: 10px;">IIT Mandi (AI/ML) Workshop</p>
             </li>
             <li class="certificate-item">
-              <a href="https://drive.google.com/file/d/1rX2jmgOKwnt6CrdQlpuWfQF756mx7Ara/view?usp=share_link" target="_blank">
-                <img src="/port.new/images/CERTIFICATE/nptel-python.JPG" alt="Certificat">
-              </a>
-              <p style="color: white; text-align: center; font-weight: bold; margin-top: 10px;">NPTEL Certificate</p>
+              <div class="image-container">
+                <img src="images/CERTIFICATE/nptel-python.JPG" alt="NPTEL Python Certificate" class="zoomable-image">
+              </div>
+              <p style="color: white; text-align: center; font-weight: bold; margin-top: 10px;">Python for Data Science (NPTEL)</p>
             </li>
             <li class="certificate-item">
-              <a href="https://drive.google.com/file/d/1rWrPtMhBiB_58xD4B1lGBDDYSgwKPMXv/view?usp=share_link" target="_blank">
-                <img src="/port.new/images/CERTIFICATE/Spoken-tutorial.JPG" alt="Certificate 4">
-              </a>
-              <p style="color: white; text-align: center; font-weight: bold; margin-top: 10px;">Spoken Tutorial</p>
+              <div class="image-container">
+                <img src="images/CERTIFICATE/Spoken-tutorial.JPG" alt="Spoken Tutorial Certificate" class="zoomable-image">
+              </div>
+              <p style="color: white; text-align: center; font-weight: bold; margin-top: 10px;">Python 3.4.3 (Spoken Tutorial)</p>
+            </li>
+            <li class="certificate-item">
+              <div class="image-container">
+                <img src="images/CERTIFICATE/Deep Learning NPTEL.JPG" alt="Deep Learning (NPTEL)" class="zoomable-image">
+              </div>
+              <p style="color: white; text-align: center; font-weight: bold; margin-top: 10px;">Deep Learning for Computer Vision (NPTEL)</p>
             </li>
           </ul>
         </section>
+        
+        <!-- Fullscreen Modal -->
+        <div id="image-modal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modal-image">
+        </div>
+        
+        <!-- CSS -->
+        <style>
+          .certificate-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            overflow-x: hidden; /* Hide horizontal overflow */
+            transition: transform 0.3s ease-in-out;
+          }
+        
+          .certificate-item {
+            list-style: none;
+            flex: 1 1 calc(25% - 20px); /* 4 columns on desktop */
+            max-width: calc(25% - 20px);
+          }
+        
+          .image-container {
+            width: 100%; /* Full width of parent */
+            aspect-ratio: 4 / 3; /* Maintain standard 4:3 ratio */
+            overflow: hidden;
+            position: relative;
+          }
+        
+          .zoomable-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+          }
+        
+          .zoomable-image:hover {
+            transform: scale(1.1);
+          }
+        
+          /* Horizontal slider for mobile devices */
+          @media (max-width: 768px) {
+            .certificate-list {
+              flex-wrap: nowrap; /* Prevent wrapping */
+              overflow-x: scroll; /* Enable horizontal scrolling */
+              scroll-snap-type: x mandatory; /* Snap to items */
+            }
+        
+            .certificate-item {
+              flex: 0 0 auto; /* Keep items side-by-side */
+              width: 80%; /* Set width for each item */
+              scroll-snap-align: start; /* Snap alignment */
+            }
+        
+            .image-container {
+              width: 100%; /* Ensure consistent aspect ratio */
+            }
+          }
+        
+          /* Custom scrollbar styles for mobile */
+          @media (max-width: 768px) {
+            .certificate-list::-webkit-scrollbar {
+              height: 8px;
+            }
+        
+            .certificate-list::-webkit-scrollbar-thumb {
+              background: rgba(255, 255, 255, 0.5);
+              border-radius: 10px;
+            }
+        
+            .certificate-list::-webkit-scrollbar-thumb:hover {
+              background: rgba(255, 255, 255, 0.8);
+            }
+          }
+        
+          .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: auto;
+            justify-content: center;
+            align-items: center;
+          }
+        
+          .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+          }
+        
+          .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+          }
+        
+          .close:hover,
+          .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+          }
+        </style>
+        
+        <!-- JavaScript -->
+        <script>
+          // Get modal elements
+          const modal = document.getElementById("image-modal");
+          const modalImage = document.getElementById("modal-image");
+          const closeButton = document.querySelector(".close");
+        
+          // Add click event to all zoomable images
+          document.querySelectorAll(".zoomable-image").forEach((image) => {
+            image.addEventListener("click", () => {
+              modal.style.display = "flex";
+              modalImage.src = image.src;
+            });
+          });
+        
+          // Close modal on click of close button
+          closeButton.addEventListener("click", () => {
+            modal.style.display = "none";
+          });
+        
+          // Close modal on click outside the image
+          modal.addEventListener("click", (event) => {
+            if (event.target === modal) {
+              modal.style.display = "none";
+            }
+          });
+        </script>
 
       </article>
 
@@ -557,66 +725,182 @@
 
         <section class="skill">
 
-          <h3 class="h3 skills-title">My skills</h3>
+          <h3 class="h3 skills-title">My Skills</h3>
+        
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
 
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Web devlopnment</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
+            <li style="flex: 1 1 calc(45% - 20px); max-width: calc(45% - 20px); 
+                       border: 2px solid #333; 
+                       border-radius: 10px; 
+                       background: linear-gradient(145deg, #1e1e1e, #292929); 
+                       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7), -4px -4px 10px rgba(50, 50, 50, 0.1); 
+                       padding: 20px; 
+                       text-align: center; 
+                       color: #ffffff; 
+                       transition: transform 0.3s, background 0.3s;">
+              Web Development
+            </li>
+        
+            <li style="flex: 1 1 calc(45% - 20px); max-width: calc(45% - 20px); 
+                       border: 2px solid #333; 
+                       border-radius: 10px; 
+                       background: linear-gradient(145deg, #1e1e1e, #292929); 
+                       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7), -4px -4px 10px rgba(50, 50, 50, 0.1); 
+                       padding: 20px; 
+                       text-align: center; 
+                       color: #ffffff; 
+                       transition: transform 0.3s, background 0.3s;">
+              Machine Learning Algorithms
+            </li>
+        
+            <li style="flex: 1 1 calc(45% - 20px); max-width: calc(45% - 20px); 
+                       border: 2px solid #333; 
+                       border-radius: 10px; 
+                       background: linear-gradient(145deg, #1e1e1e, #292929); 
+                       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7), -4px -4px 10px rgba(50, 50, 50, 0.1); 
+                       padding: 20px; 
+                       text-align: center; 
+                       color: #ffffff; 
+                       transition: transform 0.3s, background 0.3s;">
+              Data Structures and Algorithms
+            </li>
+        
+            <li style="flex: 1 1 calc(45% - 20px); max-width: calc(45% - 20px); 
+                       border: 2px solid #333; 
+                       border-radius: 10px; 
+                       background: linear-gradient(145deg, #1e1e1e, #292929); 
+                       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7), -4px -4px 10px rgba(50, 50, 50, 0.1); 
+                       padding: 20px; 
+                       text-align: center; 
+                       color: #ffffff; 
+                       transition: transform 0.3s, background 0.3s;">
+              Python Programming
             </li>
 
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">ML algirithm</h5>
-                <data value="60">60%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
-              </div>
-
+            <li style="flex: 1 1 calc(45% - 20px); max-width: calc(45% - 20px); 
+                       border: 2px solid #333; 
+                       border-radius: 10px; 
+                       background: linear-gradient(145deg, #1e1e1e, #292929); 
+                       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7), -4px -4px 10px rgba(50, 50, 50, 0.1); 
+                       padding: 20px; 
+                       text-align: center; 
+                       color: #ffffff; 
+                       transition: transform 0.3s, background 0.3s;">
+              Html
             </li>
 
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Data structure and akgorithm</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
+            <li style="flex: 1 1 calc(45% - 20px); max-width: calc(45% - 20px); 
+                       border: 2px solid #333; 
+                       border-radius: 10px; 
+                       background: linear-gradient(145deg, #1e1e1e, #292929); 
+                       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7), -4px -4px 10px rgba(50, 50, 50, 0.1); 
+                       padding: 20px; 
+                       text-align: center; 
+                       color: #ffffff; 
+                       transition: transform 0.3s, background 0.3s;">
+              Artificial Intelligence (AI)
             </li>
 
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Python</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
+            <li style="flex: 1 1 calc(45% - 20px); max-width: calc(45% - 20px); 
+                       border: 2px solid #333; 
+                       border-radius: 10px; 
+                       background: linear-gradient(145deg, #1e1e1e, #292929); 
+                       box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7), -4px -4px 10px rgba(50, 50, 50, 0.1); 
+                       padding: 20px; 
+                       text-align: center; 
+                       color: #ffffff; 
+                       transition: transform 0.3s, background 0.3s;">
+              Natural Language Processing (NLP)
             </li>
-
+        
           </ul>
-
-        </section>
-
+        
+        
+          <section style="text-align: center; margin-top: 40px;">
+            <!-- View Resume Button -->
+            <a href="images/CERTIFICATE/resume.pdf" target="_blank" style="
+              display: inline-block;
+              padding: 15px 30px;
+              font-size: 18px;
+              font-weight: bold;
+              text-transform: uppercase;
+              color: hsl(45, 100%, 71%);
+              text-decoration: none;
+              background: linear-gradient(90deg, #333, #555);
+              border: none;
+              border-radius: 50px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+              transition: all 0.4s ease;
+              margin-right: 20px;
+              position: relative;
+              overflow: hidden;
+            ">
+              <span style="display: inline-block; position: relative; z-index: 2;">
+                <ion-icon name="eye-outline" style="vertical-align: middle; margin-right: 8px; font-size: 20px;"></ion-icon>
+                View Resume
+              </span>
+              <span style="
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 300%;
+                height: 100%;
+                background: linear-gradient(90deg, #777, #444);
+                transition: all 0.4s ease;
+                z-index: 1;
+                transform: rotate(10deg);
+              "></span>
+            </a>
+            
+            <!-- Download Resume Button -->
+            <a href="images/CERTIFICATE/resume.pdf" download="ARYAN RESUME" style="
+              display: inline-block;
+              padding: 15px 30px;
+              font-size: 18px;
+              font-weight: bold;
+              text-transform: uppercase;
+              color: hsl(45, 100%, 71%);
+              text-decoration: none;
+              background: linear-gradient(90deg, #222, #444);
+              border: none;
+              border-radius: 50px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+              transition: all 0.4s ease;
+              position: relative;
+              overflow: hidden;
+            ">
+              <span style="display: inline-block; position: relative; z-index: 2;">
+                <ion-icon name="cloud-download-outline" style="vertical-align: middle; margin-right: 8px; font-size: 20px;"></ion-icon>
+                Download Resume
+              </span>
+              <span style="
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 300%;
+                height: 100%;
+                background: linear-gradient(90deg, #777, #444);
+                transition: all 0.4s ease;
+                z-index: 1;
+                transform: rotate(10deg);
+              "></span>
+            </a>
+          </section>
+          
+          <script>
+            // Add hover effect for both buttons
+            const buttons = document.querySelectorAll('a[download], a[target="_blank"]');
+            buttons.forEach(button => {
+              button.addEventListener('mouseover', function () {
+                const span = button.querySelector('span:nth-child(2)');
+                span.style.left = '0';
+              });
+              button.addEventListener('mouseleave', function () {
+                const span = button.querySelector('span:nth-child(2)');
+                span.style.left = '-100%';
+              });
+            });
+          </script>
       </article>
 
 
