@@ -159,7 +159,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
 }
 
       document.addEventListener('DOMContentLoaded', function () {
-        const form = document.getElementById('contact-form');
+        const form = document.getElementById('||||||||||');
         const submitButton = form.querySelector('button[type="submit"]');
         
         form.addEventListener('input', function () {
@@ -176,7 +176,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
             data[key] = value;
           });
       
-          fetch('https://script.google.com/macros/s/AKfycbx8sY5JlcZgM9j4pfqKrvaSF1u3YwVW9XutGaeT07N0nHyZHua5ZcsNTpxBPgrv7KTJ/exec', {
+          fetch('https://script.google.com/macros/s/AKfycbwNSapS9eyM4aERjy_h7t3ehSLHOH5UDXQJZjJNwAqi5v6FinXVcyw7WGXpBnPsQT8PqQ/exec', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
