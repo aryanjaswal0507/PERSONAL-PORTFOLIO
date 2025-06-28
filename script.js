@@ -176,7 +176,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
             data[key] = value;
           });
       
-          fetch('https://script.google.com/macros/s/AKfycbwfjW25aA54ebikmgh1P664-PqsAFBXLv5cRGZ6aIc1ZhUbJj6fXXGRh8tmsliX059-cA/exec', {
+          fetch('https://script.google.com/macros/s/AKfycbx8sY5JlcZgM9j4pfqKrvaSF1u3YwVW9XutGaeT07N0nHyZHua5ZcsNTpxBPgrv7KTJ/exec', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
